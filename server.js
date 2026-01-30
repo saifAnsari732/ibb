@@ -390,7 +390,7 @@ app.get('/api/categories', async (req, res) => {
 });
 
 // Check
-app.get('/api/health', (req, res) => {
+app.get('/api', (req, res) => {
   res.json({ status: 'OK', message: 'Inventory API is running' });
 });
  
