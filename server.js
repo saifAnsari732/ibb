@@ -31,8 +31,8 @@ app.use(fileUpload({
       api_secret: "iu7MJQ6i5XHaX-yjn5-YodGakdg", 
   });
 // MongoDB Connection 
-const MONGODB_URI = process.env.MONGODB_URI ;
-const JWT_SECRET = process.env.JWT_SECRET ;
+const MONGODB_URI = process.env.MONGODB_URI ||"mongodb+srv://ansarisaifuddin732_db_user:sKTHEKv4CerFmGud@cluster0.bmtugu6.mongodb.net/taskcollege";
+const JWT_SECRET = process.env.JWT_SECRET||"your-super-secret-jwt-key-change-this-in-production";
 
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('✅ Connected to MongoDB'))
@@ -388,9 +388,9 @@ app.get('/api/categories', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch categories' });
   }
 });
-
+ 
 // Check
-app.get('/api', (req, res) => {
+app.get('/api/o', (req, res) => {
   res.json({ status: 'OK', message: 'Inventory API is running' });
 });
  
