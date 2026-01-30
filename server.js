@@ -30,8 +30,8 @@ app.use(fileUpload({
       api_key: "645985342632788" ,  
       api_secret: "iu7MJQ6i5XHaX-yjn5-YodGakdg", 
   });
-// MongoDB Connection 
-const MONGODB_URI = process.env.MONGODB_URI ||"mongodb+srv://ansarisaifuddin732_db_user:sKTHEKv4CerFmGud@cluster0.bmtugu6.mongodb.net/taskcollege";
+// MongoDB Connection wdbjhdjwqfqwmfn
+const MONGODB_URI = process.env.MONGODB_URI||"mongodb+srv://ansarisaifuddin732_db_user:sKTHEKv4CerFmGud@cluster0.bmtugu6.mongodb.net/taskcollege";
 const JWT_SECRET = process.env.JWT_SECRET||"your-super-secret-jwt-key-change-this-in-production";
 
 mongoose.connect(MONGODB_URI)
